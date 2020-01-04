@@ -73,8 +73,7 @@ class AppContentViewController: UITableViewController
         self.tableView.contentInset.bottom = 20
                 
         self.screenshotsCollectionView.dataSource = self.screenshotsDataSource
-        self.permissionsCollectionView.dataSource = self.permissionsDataSource
-        
+      
         self.subtitleLabel.text = self.app.subtitle
         self.descriptionTextView.text = self.app.localizedDescription
         self.versionDescriptionTextView.text = self.app.versionDescription

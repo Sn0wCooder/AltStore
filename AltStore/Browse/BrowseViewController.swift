@@ -297,13 +297,8 @@ extension BrowseViewController: UICollectionViewDelegateFlowLayout
 
         self.prototypeCell.layoutIfNeeded()
         
-        let collectionViewWidth = self.prototypeCell.screenshotsCollectionView.bounds.width
-        let screenshotWidth = ((collectionViewWidth - padding) / maxVisibleScreenshots).rounded(.down)
-        let screenshotHeight = screenshotWidth * aspectRatio
+     
 
-        let heightConstraint = self.prototypeCell.screenshotsCollectionView.heightAnchor.constraint(equalToConstant: screenshotHeight)
-        heightConstraint.isActive = true
-        defer { heightConstraint.isActive = false }
 
         let itemSize = self.prototypeCell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         self.cachedItemSizes[item.bundleIdentifier] = itemSize

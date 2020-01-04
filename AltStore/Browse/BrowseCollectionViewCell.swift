@@ -37,14 +37,8 @@ import Nuke
         super.awakeFromNib()
         
         // Must be registered programmatically, not in BrowseCollectionViewCell.xib, or else it'll throw an exception 🤷‍♂️.
-        self.screenshotsCollectionView.register(ScreenshotCollectionViewCell.self, forCellWithReuseIdentifier: RSTCellContentGenericCellIdentifier)
         
-        self.screenshotsCollectionView.delegate = self
-        self.screenshotsCollectionView.dataSource = self.dataSource
-        self.screenshotsCollectionView.prefetchDataSource = self.dataSource
-        
-        self.screenshotsContentView.layer.cornerRadius = 20
-        self.screenshotsContentView.layer.masksToBounds = true
+       
         
         self.update()
     }
